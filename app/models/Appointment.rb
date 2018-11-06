@@ -1,9 +1,8 @@
 class Appointment
 
-  def initialize(doctor, patient, date=Date.now, location="Flatiron")
+  def initialize(doctor, patient, location="Flatiron")
     @doctor = doctor
     @patient = patient
-    @date = date
     @location = location
   end
 
