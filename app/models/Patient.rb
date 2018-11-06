@@ -8,7 +8,7 @@ class Patient
 
   end
 
-  def self.find_by_first_name
+  def self.find_by_name
 
   end
 
