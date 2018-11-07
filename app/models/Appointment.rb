@@ -1,17 +1,30 @@
 class Appointment
+  attr_reader :doctor, :patient
+  attr_accessor :location, :time
 
-  def initialize(doctor, patient, location="Flatiron")
+  @@all = []
+
+  def initialize(doctor, patient, time, location="MSG")
     @doctor = doctor
     @patient = patient
     @location = location
+    @time = time
+    @@all << self
   end
+  
 
-  def doctor
+  # remember this is a implementation of mass assignment,
+  # don't worry about knowing this for the code challenge
+  # def initialize(hash)
+  #   @doctor = hash["doctor"]
+  #   @patient = hash["patient"]
+  #   @location = hash["location"]
+  #   @time = hash["time"]
+  #   @@all << self
+  # end
 
-  end
-
-  def patient
-
+  def self.all
+    @@all
   end
 
   def self.find_by_location
